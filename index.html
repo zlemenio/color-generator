@@ -1,0 +1,92 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+      
+    </head>
+    <body>
+        <header>
+            <input type="color" id="colorpicker" value="#0000ff">
+           
+          
+            
+            <div class="custom-select">
+            <button
+                class="select-button"
+                role="combobox"
+                aria-label="select button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="select-dropdown"
+                >
+                <span class="selected-value">Open this select menu</span>
+                <span class="arrow"></span>
+            </button>
+            <ul class="select-dropdown"
+            role="listbox" id="select-dropdown">
+                
+                <li role="option">
+                <input type="radio" id="monochrome" name="social-account" />    
+                <label for="monochrome">monochrome</label>
+                </li>
+                <li role="option">
+                <input type="radio" id="monochrome-dark" name="social-account" />    
+                <label for="monochrome-dark">monochrome-dark</label>
+                </li>
+                <li role="option">
+                <input type="radio" id="monochrome-light" name="social-account" />    
+                <label for="monochrome-light">monochrome-light</label>
+                </li>
+                <li role="option">
+                <input type="radio" id="analogic" name="social-account" />    
+                <label for="analogic">analogic</label>
+                </li>
+                <li role="option">
+                <input type="radio" id="complement" name="social-account" />    
+                <label for="complement">complement</label>
+                </li>
+                <li role="option">
+                <input type="radio" id="analogic-complement" name="social-account" />    
+                <label for="analogic-complement">analogic-complement</label>
+                </li>
+                <li role="option">
+                <input type="radio" id="triad" name="social-account" />    
+                <label for="triad">triad</label>
+                </li>
+                <li role="option">
+                <input type="radio" id="quad" name="social-account" />    
+                <label for="quad">quad</label>
+                </li>
+                <!-- ... -->
+            </ul>
+            </div>
+            <button id="GET-color" disabled>Get color scheme</button>
+        </header>
+        <main>
+            <div id="firstColorScheme">
+                
+            </div>
+            
+            <div id="secondColorScheme">
+                
+            </div>
+            
+            <div id="thirdColorScheme">
+                
+            </div>
+            
+            <div id="fourthColorScheme">
+                
+            </div>
+            
+            <div id="fifthColorScheme">
+                
+            </div>
+            <p id="firstColorCode">#F55A5A</p>
+            <p id="secondColorCode">#F55A5A</p>
+            <p id="thirdColorCode">#F55A5A</p>
+            <p id="fourthColorCode">#F55A5A</p>
+            <p id="fifthColorCode">#F55A5A</p>
+        </main>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>

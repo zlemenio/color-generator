@@ -1,0 +1,200 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+}
+
+
+header {
+    min-width: 400px;
+    position: absolute;
+    height: 90px;
+    background: white;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(auto-fit, 100px);
+    gap: 12px;
+    grid-auto-flow: dense;
+    grid-template: "color custom getc";
+}
+
+header input{
+    
+    height: 42px;
+}
+
+header #mode {
+    height: 42px;
+    
+}
+
+header button {
+    height: 42px;
+    width: 165px;
+}
+
+/* Color code here*/
+#firstColorScheme {
+    background: red;
+    height: 90vh;
+}
+
+#secondColorScheme {
+    background: orange;
+    height: 90vh;
+}
+#thirdColorScheme {
+    background: brown;
+    height: 90vh;
+}
+#fourthColorScheme {
+    background: purple;
+    height: 90vh;
+}
+#fifthColorScheme {
+    background: mintcream;
+    height: 90vh;
+}
+
+
+input[type="color"] {
+    width: 60px;
+    grid-area: color;
+}
+
+input[type="color"]:focus, #GET-color:focus, .select-button:focus {
+    outline: none;
+}
+
+#GET-color {
+    grid-area: getc;
+}
+
+#GET-color, .custom-select .select-button {
+    background-color: #fff;
+    padding: 0.675em 1em;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+
+.custom-select {
+    grid-area: custom;
+    width: 312px;
+    max-width: 100%;
+    font-size: 1.15rem;
+    color: #000;
+}
+
+.custom-select .select-button {
+    width: 100%;
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-select .selected-value {
+    text-align: left;
+}
+
+.custom-select .arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #000;
+    transition: transform ease-in-out 0.3s;
+}
+
+
+
+
+/* interactivity */
+.custom-select.active .arrow {
+    transform: rotate(180deg);
+}
+
+.custom-select.active .select-dropdown {
+    opacity: 1;
+
+    visibility: visible;
+    transform: scaleY(1);
+}
+
+
+.select-dropdown {
+    position: absolute;
+    transform: scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+    width: 312px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    transition: 0.5s ease;
+}
+
+.select-dropdown:focus-within {
+    box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
+}
+
+.select-dropdown li {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.select-dropdown li label {
+    width: 100%;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.select-dropdown::-webkit-scrollbar {
+    width: 7px;
+}
+
+.select-dropdown::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+
+.select-dropdown::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 25px;
+}
+
+.select-dropdown li:hover,
+.select-dropdown input:checked ~ label {
+    background-color: #f2f2f2;
+}
+
+.select-dropdown input:focus ~ label {
+    background-color: #dfdfdf;
+}
+
+.select-dropdown input[type="radio"] {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+
